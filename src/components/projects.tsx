@@ -4,9 +4,9 @@ import { ExternalLink, Github } from 'lucide-react'
 export default function Projects() {
   const projects = [
     {
-      title: 'E-commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB.',
-      image: '/placeholder.svg?height=200&width=300',
+      title: 'coming soon',
+      description: 'coming soon',     /*'full-stack e-commerce solution with React, Node.js, and MongoDB.',*/
+      image: '/white.jpg',
       github: 'https://github.com',
       live: 'https://example.com'
     },
@@ -38,11 +38,11 @@ export default function Projects() {
                     <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                     <p className="text-gray-600 mb-4">{project.description}</p>
                     <div className="flex justify-between">
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-300">
                         <Github className="inline mr-1" size={20} />
                           GitHub
                       </a>
-                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
+                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-300">
                         <ExternalLink className="inline mr-1" size={20} />
                           Live Demo
                       </a>

@@ -2,14 +2,15 @@ import Link from 'next/link'
 import { Menu } from 'lucide-react'
 import { Button } from './ui/button'
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
+import Switch from './darkModeSwitch'
 
 
 
 export default function Header() {
   const navItems = [
-    { name: 'Blog', href: '#' },
-    { name: 'About', href: '#' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Blog', href: 'blog' },
+    { name: 'About', href: 'about' },
+    { name: 'Contact', href: 'about#contact' },
   ]
 
   return (
@@ -54,6 +55,7 @@ export default function Header() {
               ))}
             </nav>
           </SheetContent>
+          <Switch />
         </Sheet>
       </div>
     </header>

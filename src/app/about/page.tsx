@@ -1,9 +1,9 @@
-import Layout from '../components/layout'
-import Introduction from '../components/introduction'
-import Skills from '../components/skills'
-import Projects from '../components/projects'
 import Contact from '@/components/contact'
 import CareerTimeline from '@/components/career'
+import Introduction from '@/components/introduction'
+import Skills from '@/components/skills'
+import Projects from '@/components/projects'
+import Layout from '@/components/layout'
 
 
 
