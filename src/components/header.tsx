@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import { Menu } from 'lucide-react'
 import { Button } from './ui/button'
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet'
 import Switch from './darkModeSwitch'
 
 
 
 export default function Header() {
   const navItems = [
-    { name: 'Blog', href: 'blog' },
+    { name: 'Blog', href: '/' },
     { name: 'About', href: 'about' },
     { name: 'Contact', href: 'about#contact' },
   ]
@@ -17,7 +17,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-14 items-center justify-between px-4">
         <div className="mr-4 hidden md:flex">
-          <Link className="mr-6 flex items-center space-x-2" href="#">
+          <Link className="mr-6 flex items-center space-x-2" href="/">
             <span className="hidden text-xl font-bold sm:inline-block">Ukir-</span>
           </Link>
           <nav className="flex items-center space-x-4 text-sm font-medium">
@@ -43,6 +43,9 @@ export default function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="pr-0">
+            <SheetHeader>
+              <SheetTitle>Menu</SheetTitle>
+            </SheetHeader>
             <nav className="flex flex-col gap-4">
               {navItems.map((item, index) => (
                 <Link
@@ -55,8 +58,8 @@ export default function Header() {
               ))}
             </nav>
           </SheetContent>
-          <Switch />
         </Sheet>
+          <Switch />
       </div>
     </header>
   )
