@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github } from 'lucide-react'
+import { Mail, Github } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Contact() {
