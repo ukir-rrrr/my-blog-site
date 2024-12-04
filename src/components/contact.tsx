@@ -15,7 +15,7 @@ export default function Contact() {
           <Linkedin className="inline mr-1" size={24} />
           LinkedIn
         </Link> */}
-        <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-300">
+        <Link href="https://github.com/ukir-rrrr" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-300">
           <Github className="inline mr-1" size={24} />
           GitHub
         </Link>

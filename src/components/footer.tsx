@@ -19,7 +19,7 @@ export default function Footer() {
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>
           </Link> */}
-          <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
+          <Link href="https://github.com/ukir-rrrr" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
             <Github className="h-5 w-5" />
             <span className="sr-only">GitHub</span>
           </Link>
