@@ -9,11 +9,11 @@ export default function Introduction() {
   return (
     <section className="text-center mb-16">
       <Image
-        src="/f063.png"
+        src="/Op.png"
         alt="Profile Picture"
-        width={300}
+        width={200}
         height={250}
-        className="rounded-full mx-auto mb-4"
+        className=" mx-auto mb-4"
       />
       <h1 className="text-4xl font-bold mb-2">Ukir-</h1>
       <p className="text-xl text-gray-600 mb-4">Web Developer</p>
