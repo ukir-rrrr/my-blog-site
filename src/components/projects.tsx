@@ -4,11 +4,11 @@ import { ExternalLink, Github } from 'lucide-react'
 export default function Projects() {
   const projects = [
     {
-      title: 'coming soon',
-      description: 'coming soon',     /*'full-stack e-commerce solution with React, Node.js, and MongoDB.',*/
-      image: '/white.jpg',
-      github: 'https://github.com',
-      live: 'https://example.com'
+      title: 'CreativeFlow Studio',
+      description: 'ブランドと、未来をデザインする。Next.js + Tailwind CSSで構築したクリエイティブエージェンシーのWebサイト。',
+      image: '/de.png',
+      github: 'https://github.com/ukir-rrrr',
+      live: 'https://creativeflow-web-site.vercel.app/'
     },
     // {
     //   title: 'Task Management App',
@@ -32,17 +32,17 @@ export default function Projects() {
         <div className="flex justify-center">
           <div className="max-w-md w-full">
             {projects.map((project, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div key={index} className="overflow-hidden rounded-2xl border border-emerald-700/20 bg-card/90 shadow-[0_20px_45px_-30px_hsl(var(--foreground))]">
                 <Image src={project.image} alt={project.title} width={300} height={200} className="w-full h-48 object-cover" />
                   <div className="p-4">
                     <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                    <p className="text-gray-600 mb-4">{project.description}</p>
+                    <p className="mb-4 text-muted-foreground">{project.description}</p>
                     <div className="flex justify-between">
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-300">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-emerald-600 transition hover:text-teal-500">
                         <Github className="inline mr-1" size={20} />
                           GitHub
                       </a>
-                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-300">
+                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-emerald-600 transition hover:text-teal-500">
                         <ExternalLink className="inline mr-1" size={20} />
                           Live Demo
                       </a>

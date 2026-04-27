@@ -5,9 +5,9 @@ export default function Contact() {
   return (
     <section className="text-center">
       <h2 className="text-3xl font-bold mb-4">Contact</h2>
-      <p className="mb-4">↓↓↓↓</p>
+      <p className="mb-4 text-muted-foreground">お気軽にご連絡ください</p>
       <div className="flex justify-center space-x-4">
-        <Link href="mailto:aba929559@gmail.com" className="text-orange-500 hover:text-orange-300">
+        <Link href="mailto:aba929559@gmail.com" className="text-emerald-600 transition hover:text-teal-500">
           <Mail className="inline mr-1" size={24} />
           Email
         </Link>
@@ -15,7 +15,7 @@ export default function Contact() {
           <Linkedin className="inline mr-1" size={24} />
           LinkedIn
         </Link> */}
-        <Link href="https://github.com/ukir-rrrr" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-300">
+        <Link href="https://github.com/ukir-rrrr" target="_blank" rel="noopener noreferrer" className="text-emerald-600 transition hover:text-teal-500">
           <Github className="inline mr-1" size={24} />
           GitHub
         </Link>
