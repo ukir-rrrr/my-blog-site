@@ -8,16 +8,16 @@ import Switch from './darkModeSwitch'
 
 export default function Header() {
   const navItems = [
-    { name: 'Blog', href: '/' },
-    { name: 'About', href: 'about' },
-    { name: 'Contact', href: 'about#contact' },
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/about#contact' },
   ]
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-14 items-center justify-between px-4">
         <div className="mr-4 hidden md:flex">
-          <Link className="mr-6 flex items-center space-x-2" href="/">
+          <Link className="mr-6 flex items-center space-x-2" href="/about">
             <span className="hidden text-xl font-bold sm:inline-block">Ukir-</span>
           </Link>
           <nav className="flex items-center space-x-4 text-sm font-medium">

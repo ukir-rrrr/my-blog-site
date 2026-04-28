@@ -49,13 +49,13 @@ export default function Projects() {
 
         <div
           ref={trackRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory"
+          className="flex gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory -mx-6 px-6 md:-mx-10 md:px-10"
         >
           {projects.map((project, index) => (
             <div
               key={index}
               data-card
-              className="snap-start shrink-0 w-[min(80vw,360px)] overflow-hidden rounded-2xl border border-emerald-700/20 bg-card/90 shadow-[0_20px_45px_-30px_hsl(var(--foreground)/0.5)] transition duration-200 hover:-translate-y-1"
+              className="snap-center shrink-0 w-[calc(100vw-80px)] sm:w-[360px] overflow-hidden rounded-2xl border border-emerald-700/20 bg-card/90 shadow-[0_20px_45px_-30px_hsl(var(--foreground)/0.5)] transition duration-200 hover:-translate-y-1"
             >
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
@@ -96,7 +96,7 @@ export default function Projects() {
             </div>
           ))}
 
-          <div className="snap-start shrink-0 w-[min(80vw,360px)] flex items-center justify-center rounded-2xl border border-dashed border-border/60 text-sm text-muted-foreground">
+          <div className="snap-center shrink-0 w-[calc(100vw-80px)] sm:w-[360px] flex items-center justify-center rounded-2xl border border-dashed border-border/60 text-sm text-muted-foreground">
             Coming soon...
           </div>
         </div>
