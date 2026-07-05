@@ -14,12 +14,12 @@ const projects = [
     live: 'https://creativeflow-web-site.vercel.app/',
   },
   {
-    title: 'NAGI-凪',
-    description: '自然派ラーメンブランド。Next.js + Tailwind CSSで構築したWebサイト。',
-    image: '/ramen.png',
+    title: '雅味-gami',
+    description: '名古屋の食文化を現代の感性で再解釈した高級日本料理レストランサイト。洗練された和のデザインとスムーズなUXを Next.js + Tailwind CSSで実現。',
+    image: '/gami.png',
     tag: 'Restaurant Site',
     github: 'https://github.com/ukir-rrrr',
-    live: 'https://ramen-website-psi.vercel.app/',
+    live: 'https://premium-japanese-restaurant-eight.vercel.app/',
   },
 ]
 
@@ -55,7 +55,7 @@ export default function Projects() {
             <div
               key={index}
               data-card
-              className="snap-center shrink-0 w-[calc(100vw-80px)] sm:w-[360px] overflow-hidden rounded-2xl border border-emerald-700/20 bg-card/90 shadow-[0_20px_45px_-30px_hsl(var(--foreground)/0.5)] transition duration-200 hover:-translate-y-1"
+              className="snap-center shrink-0 w-[calc(100vw-80px)] sm:w-[360px] flex flex-col overflow-hidden rounded-2xl border border-emerald-700/20 bg-card/90 shadow-[0_20px_45px_-30px_hsl(var(--foreground)/0.5)] transition duration-200 hover:-translate-y-1"
             >
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
@@ -69,9 +69,9 @@ export default function Projects() {
                 </span>
               </div>
 
-              <div className="p-5">
+              <div className="flex flex-1 flex-col p-5">
                 <h3 className="mb-1 text-lg font-bold">{project.title}</h3>
-                <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
+                <p className="mb-4 flex-1 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
                 <div className="flex items-center justify-between border-t border-border/60 pt-4">
                   <a
                     href={project.github}
