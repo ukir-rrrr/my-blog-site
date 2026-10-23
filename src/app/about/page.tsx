@@ -36,11 +36,11 @@ const sectionLinks = [
 export default function AboutPage() {
   return (
     <Layout>
-      <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-border/70 bg-[linear-gradient(140deg,_hsl(var(--background))_30%,_hsl(var(--muted)/0.4)_100%)] px-4 py-10 shadow-[0_30px_80px_-35px_hsl(var(--foreground)/0.35)] sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,_hsl(var(--primary)/0.15),_transparent_34%),radial-gradient(circle_at_80%_18%,_hsl(var(--chart-2)/0.2),_transparent_36%),radial-gradient(circle_at_80%_85%,_hsl(var(--chart-5)/0.18),_transparent_40%)]" />
-        <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(hsl(var(--foreground)/0.12)_1px,transparent_1px)] [background-size:18px_18px]" />
+      <div className="relative mx-auto max-w-6xl overflow-hidden rounded-4xl border border-border/70 bg-[linear-gradient(140deg,hsl(var(--background))_30%,hsl(var(--muted)/0.4)_100%)] px-4 py-10 shadow-[0_30px_80px_-35px_hsl(var(--foreground)/0.35)] sm:px-8">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,hsl(var(--primary)/0.15),transparent_34%),radial-gradient(circle_at_80%_18%,hsl(var(--chart-2)/0.2),transparent_36%),radial-gradient(circle_at_80%_85%,hsl(var(--chart-5)/0.18),transparent_40%)]" />
+        <div className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(hsl(var(--foreground)/0.12)_1px,transparent_1px)] bg-size-[18px_18px]" />
 
-        <section className="relative mb-12 rounded-3xl border border-border/70 bg-background/80 p-6 backdrop-blur-sm md:p-10">
+        <section className="relative mb-12 rounded-3xl border border-border/70 bg-background/80 p-6 backdrop-blur-xs md:p-10">
           <div className="grid items-start gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
               <p className="mb-4 inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-1 text-xs font-semibold tracking-[0.18em] text-primary">
@@ -48,7 +48,7 @@ export default function AboutPage() {
               </p>
               <h1 className="text-3xl font-black leading-[1.18] md:text-5xl">
                 Build beautiful
-                <span className="block pb-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-green-700 bg-clip-text text-transparent">
+                <span className="block pb-1 bg-linear-to-r from-emerald-500 via-teal-500 to-green-700 bg-clip-text text-transparent">
                   digital experiences.
                 </span>
               </h1>
@@ -97,7 +97,7 @@ export default function AboutPage() {
                 key={fact.title}
                 className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card/80 p-5 transition duration-200 hover:-translate-y-1"
               >
-                <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${fact.accent} opacity-70`} />
+                <div className={`pointer-events-none absolute inset-0 bg-linear-to-br ${fact.accent} opacity-70`} />
                 <div className="relative">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                     {fact.title}
@@ -110,27 +110,27 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="relative mb-8 rounded-2xl border border-border/70 bg-background/80 p-6 backdrop-blur md:p-10">
+        <section className="relative mb-8 rounded-2xl border border-border/70 bg-background/80 p-6 backdrop-blur-sm md:p-10">
           <p className="mb-4 text-xs font-semibold tracking-[0.16em] text-muted-foreground">INTRODUCTION</p>
           <Introduction />
         </section>
 
-        <div id="career" className="relative mb-8 scroll-mt-24 rounded-2xl border border-border/70 bg-background/80 p-6 backdrop-blur md:p-10">
+        <div id="career" className="relative mb-8 scroll-mt-24 rounded-2xl border border-border/70 bg-background/80 p-6 backdrop-blur-sm md:p-10">
           <p className="mb-4 text-xs font-semibold tracking-[0.16em] text-muted-foreground">CAREER PATH</p>
           <CareerTimeline />
         </div>
 
-        <div id="skills" className="relative mb-8 scroll-mt-24 rounded-2xl border border-border/70 bg-background/80 p-6 backdrop-blur md:p-10">
+        <div id="skills" className="relative mb-8 scroll-mt-24 rounded-2xl border border-border/70 bg-background/80 p-6 backdrop-blur-sm md:p-10">
           <p className="mb-4 text-xs font-semibold tracking-[0.16em] text-muted-foreground">SKILL SET</p>
           <Skills />
         </div>
 
-        <div id="projects" className="relative mb-8 scroll-mt-24 rounded-2xl border border-border/70 bg-background/80 p-6 backdrop-blur md:p-10">
+        <div id="projects" className="relative mb-8 scroll-mt-24 rounded-2xl border border-border/70 bg-background/80 p-6 backdrop-blur-sm md:p-10">
           <p className="mb-4 text-xs font-semibold tracking-[0.16em] text-muted-foreground">PROJECTS</p>
           <Projects />
         </div>
 
-        <div id="contact" className="relative scroll-mt-24 rounded-2xl border border-border/70 bg-background/80 p-6 backdrop-blur md:p-10">
+        <div id="contact" className="relative scroll-mt-24 rounded-2xl border border-border/70 bg-background/80 p-6 backdrop-blur-sm md:p-10">
           <p className="mb-4 text-xs font-semibold tracking-[0.16em] text-muted-foreground">GET IN TOUCH</p>
           <Contact />
         </div>

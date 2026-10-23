@@ -12,7 +12,7 @@ export default function Skills() {
         {skills.map((skill, index) => (
           <span
             key={index}
-            className="rounded-full border border-emerald-600/30 bg-gradient-to-r from-emerald-600 to-teal-600 px-3 py-1 text-sm text-white shadow-sm"
+            className="rounded-full border border-emerald-600/30 bg-linear-to-r from-emerald-600 to-teal-600 px-3 py-1 text-sm text-white shadow-xs"
           >
             {skill}
           </span>

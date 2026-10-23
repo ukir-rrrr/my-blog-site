@@ -42,14 +42,14 @@ export default function Projects() {
         <button
           onClick={() => scroll('left')}
           aria-label="前へ"
-          className="absolute left-0 top-1/2 z-10 -translate-y-1/2 -translate-x-3 flex h-9 w-9 items-center justify-center rounded-full border border-border/70 bg-background/90 shadow-md backdrop-blur transition hover:border-emerald-500/50 hover:text-emerald-500 opacity-0 group-hover:opacity-100"
+          className="absolute left-0 top-1/2 z-10 -translate-y-1/2 -translate-x-3 flex h-9 w-9 items-center justify-center rounded-full border border-border/70 bg-background/90 shadow-md backdrop-blur-sm transition hover:border-emerald-500/50 hover:text-emerald-500 opacity-0 group-hover:opacity-100"
         >
           <ChevronLeft size={18} />
         </button>
 
         <div
           ref={trackRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory -mx-6 px-6 md:-mx-10 md:px-10"
+          className="flex gap-6 overflow-x-auto scroll-smooth pb-4 scrollbar-none [&::-webkit-scrollbar]:hidden snap-x snap-mandatory -mx-6 px-6 md:-mx-10 md:px-10"
         >
           {projects.map((project, index) => (
             <div
@@ -64,7 +64,7 @@ export default function Projects() {
                   fill
                   className="object-cover transition duration-300 hover:scale-105"
                 />
-                <span className="absolute left-3 top-3 rounded-full border border-emerald-500/30 bg-background/80 px-2.5 py-0.5 text-xs font-semibold text-emerald-600 backdrop-blur">
+                <span className="absolute left-3 top-3 rounded-full border border-emerald-500/30 bg-background/80 px-2.5 py-0.5 text-xs font-semibold text-emerald-600 backdrop-blur-sm">
                   {project.tag}
                 </span>
               </div>
@@ -86,7 +86,7 @@ export default function Projects() {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-4 py-1.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
+                    className="flex items-center gap-1.5 rounded-full bg-linear-to-r from-emerald-500 to-teal-500 px-4 py-1.5 text-sm font-semibold text-white shadow-xs transition hover:opacity-90"
                   >
                     <ExternalLink size={14} />
                     Live Demo
@@ -104,7 +104,7 @@ export default function Projects() {
         <button
           onClick={() => scroll('right')}
           aria-label="次へ"
-          className="absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-3 flex h-9 w-9 items-center justify-center rounded-full border border-border/70 bg-background/90 shadow-md backdrop-blur transition hover:border-emerald-500/50 hover:text-emerald-500 opacity-0 group-hover:opacity-100"
+          className="absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-3 flex h-9 w-9 items-center justify-center rounded-full border border-border/70 bg-background/90 shadow-md backdrop-blur-sm transition hover:border-emerald-500/50 hover:text-emerald-500 opacity-0 group-hover:opacity-100"
         >
           <ChevronRight size={18} />
         </button>

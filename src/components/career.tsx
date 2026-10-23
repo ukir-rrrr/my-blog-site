@@ -21,7 +21,7 @@ export default function CareerTimeline() {
         <ul className="space-y-3">
           {careerItems.map((item, index) => (
             <li key={index} className="flex items-center justify-center gap-2">
-              <span className="mt-2 w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+              <span className="mt-2 w-2 h-2 rounded-full bg-primary shrink-0" />
               <span className="text-base">
                 {item.title}
                 <span className="text-muted-foreground">({item.period})</span>

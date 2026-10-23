@@ -1,14 +1,16 @@
 "use client";
 
 import { Lightning, LightningSlash } from "@mynaui/icons-react";
-import { useState, useEffect } from "react";
+import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 
 export default function Switch() {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
   const { setTheme, resolvedTheme } = useTheme();
-
-  useEffect(() => setMounted(true), []);
 
   if (!mounted) {
     return null;
