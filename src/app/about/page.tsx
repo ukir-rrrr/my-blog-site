@@ -131,11 +131,11 @@ export default function AboutPage() {
           Projects
         </h2>
 
-        <div className="mx-auto mt-14 grid max-w-5xl gap-10 md:mt-16 md:grid-cols-2 md:gap-x-12 md:gap-y-14">
+        <div className="mt-12 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:mt-14 md:gap-6">
           {[0, 1].map((index) => (
-            <article key={index} className="flex flex-col gap-4">
+            <article key={index} className="flex min-w-0 flex-col gap-4">
               <div
-                className="aspect-[4/3] w-full rounded-xl border border-border/50 bg-muted/25"
+                className="aspect-[16/10] w-full rounded-xl border border-border/50 bg-muted/25"
                 aria-hidden
               />
               <div className="space-y-3" aria-hidden>
