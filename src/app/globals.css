@@ -121,3 +121,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.about-quiet {
+  background: hsl(var(--background));
+}
