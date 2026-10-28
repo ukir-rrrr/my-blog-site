@@ -1,6 +1,75 @@
 import Image from 'next/image'
 import Layout from '@/components/layout'
 
+function AboutFallingBaseball() {
+  return (
+    <svg
+      className="h-9 w-9 shrink-0"
+      viewBox="0 0 44 58"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+    >
+      <path
+        d="M10 8 C12 14 13 20 14 26"
+        stroke="#0a0a0a"
+        strokeWidth="2.25"
+        strokeLinecap="round"
+      />
+      <path
+        d="M16 6 C18 13 19 19 20 25"
+        stroke="#0a0a0a"
+        strokeWidth="2.75"
+        strokeLinecap="round"
+      />
+      <path
+        d="M22 6 C22 13 22 19 22 25"
+        stroke="#0a0a0a"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <path
+        d="M28 6 C27 13 25 19 24 25"
+        stroke="#0a0a0a"
+        strokeWidth="2.75"
+        strokeLinecap="round"
+      />
+      <path
+        d="M34 8 C32 14 30 20 28 26"
+        stroke="#0a0a0a"
+        strokeWidth="2.25"
+        strokeLinecap="round"
+      />
+
+      <circle cx="22" cy="42" r="11.5" fill="#ffffff" stroke="#0a0a0a" strokeWidth="2" />
+      <path
+        d="M12.5 42 C15 34 19 30 22 30 C25 30 29 34 31.5 42"
+        stroke="#0a0a0a"
+        strokeWidth="1.35"
+        strokeLinecap="round"
+      />
+      <path
+        d="M12.5 42 C15 50 19 54 22 54 C25 54 29 50 31.5 42"
+        stroke="#0a0a0a"
+        strokeWidth="1.35"
+        strokeLinecap="round"
+      />
+      <path
+        d="M14 36 L15.2 37.4 M17 33.5 L18.1 35 M20.5 32 L21.4 33.6 M24 32 L24.9 33.6 M27 33.5 L28.1 35 M30 36 L31.2 37.4"
+        stroke="#b91c1c"
+        strokeWidth="1.1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M14 48 L15.2 46.6 M17 50.5 L18.1 49 M20.5 52 L21.4 50.4 M24 52 L24.9 50.4 M27 50.5 L28.1 49 M30 48 L31.2 46.6"
+        stroke="#b91c1c"
+        strokeWidth="1.1"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
 function AboutTripleChevron() {
   const chevrons = [
     { y: 10 },
@@ -10,7 +79,7 @@ function AboutTripleChevron() {
 
   return (
     <svg
-      className="about-quiet-bounce-arrow h-[2.125rem] w-[2.125rem] text-black dark:text-black"
+      className="h-[2.125rem] w-[2.125rem] shrink-0 text-black dark:text-black"
       viewBox="0 0 56 72"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +137,10 @@ export default function AboutPage() {
           className="about-quiet-scroll-hint pointer-events-none absolute bottom-8 right-0 md:bottom-10"
           aria-hidden
         >
-          <AboutTripleChevron />
+          <div className="about-quiet-bounce-arrow flex items-end gap-1.5 sm:gap-2">
+            <AboutFallingBaseball />
+            <AboutTripleChevron />
+          </div>
         </div>
       </div>
 
