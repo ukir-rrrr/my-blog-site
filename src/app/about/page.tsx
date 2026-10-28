@@ -4,7 +4,7 @@ import Layout from '@/components/layout'
 function AboutFallingBaseball() {
   return (
     <svg
-      className="h-9 w-9 shrink-0"
+      className="h-[6.875rem] w-[5.25rem] shrink-0"
       viewBox="0 0 44 58"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ function AboutTripleChevron() {
 
   return (
     <svg
-      className="h-[2.125rem] w-[2.125rem] shrink-0 text-black dark:text-black"
+      className="h-[6.875rem] w-[5.35rem] shrink-0 text-black dark:text-black"
       viewBox="0 0 56 72"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +137,7 @@ export default function AboutPage() {
           className="about-quiet-scroll-hint pointer-events-none absolute bottom-8 right-0 md:bottom-10"
           aria-hidden
         >
-          <div className="about-quiet-bounce-arrow flex items-end gap-1.5 sm:gap-2">
+          <div className="about-quiet-bounce-arrow flex items-end gap-2 sm:gap-2.5">
             <AboutFallingBaseball />
             <AboutTripleChevron />
           </div>
