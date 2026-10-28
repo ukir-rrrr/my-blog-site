@@ -124,12 +124,12 @@ export default function AboutPage() {
       </div>
 
       <section
-        className="about-featured-work border-t border-border/40 pb-24 pt-20 md:pb-32 md:pt-28"
-        aria-label="Featured work"
+        className="about-featured-work pb-24 pt-20 md:pb-32 md:pt-28"
+        aria-label="Projects"
       >
-        <p className="text-center font-mono text-sm tracking-wide text-muted-foreground">
-          /* Featured Work */
-        </p>
+        <h2 className="text-center text-sm font-medium tracking-[0.12em] text-muted-foreground uppercase">
+          Projects
+        </h2>
 
         <div className="mx-auto mt-14 grid max-w-5xl gap-10 md:mt-16 md:grid-cols-2 md:gap-x-12 md:gap-y-14">
           {[0, 1].map((index) => (
