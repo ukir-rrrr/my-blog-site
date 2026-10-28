@@ -18,7 +18,7 @@ export default function AboutPage() {
               className="h-auto w-[220px] rounded-2xl sm:w-[260px] md:w-[280px]"
             />
             <p className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:mt-5 sm:text-4xl">
-              Ukir-
+              Ukir←
             </p>
             <p className="mt-1 text-base text-muted-foreground sm:text-lg">
               Web Developer
