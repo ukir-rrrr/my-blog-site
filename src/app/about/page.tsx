@@ -4,41 +4,50 @@ import Layout from '@/components/layout'
 function AboutBaseballBall() {
   return (
     <svg
-      className="-mt-3 h-14 w-14 shrink-0"
+      className="h-14 w-14 shrink-0"
       viewBox="0 0 64 64"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden
     >
-      <circle cx="32" cy="32" r="27" fill="#ffffff" stroke="#0a0a0a" strokeWidth="2.5" />
+      <circle cx="32" cy="32" r="28" fill="#ffffff" stroke="#0a0a0a" strokeWidth="2.25" />
+
       <path
-        d="M14 32 C20 12 44 12 50 32"
+        d="M32 6 Q 8 22 32 32 Q 8 42 32 58"
         stroke="#0a0a0a"
-        strokeWidth="1.35"
+        strokeWidth="1.05"
         strokeLinecap="round"
-        strokeDasharray="1.6 2.4"
       />
       <path
-        d="M14 32 C20 52 44 52 50 32"
+        d="M32 6 Q 56 22 32 32 Q 56 42 32 58"
         stroke="#0a0a0a"
-        strokeWidth="1.35"
+        strokeWidth="1.05"
         strokeLinecap="round"
-        strokeDasharray="1.6 2.4"
       />
-      <path
-        d="M32 7 C24 18 24 46 32 57"
-        stroke="#0a0a0a"
-        strokeWidth="1.35"
-        strokeLinecap="round"
-        strokeDasharray="1.6 2.4"
-      />
-      <path
-        d="M32 7 C40 18 40 46 32 57"
-        stroke="#0a0a0a"
-        strokeWidth="1.35"
-        strokeLinecap="round"
-        strokeDasharray="1.6 2.4"
-      />
+
+      <g stroke="#0a0a0a" strokeWidth="1.15" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M24.2 10.8 L25.4 12 L26.6 10.8" />
+        <path d="M19.8 15.5 L21 16.7 L22.2 15.5" />
+        <path d="M16.2 20.5 L17.4 21.8 L18.6 20.5" />
+        <path d="M13.8 26.2 L15 27.5 L16.2 26.2" />
+        <path d="M12.8 31.5 L14 32.8 L15.2 31.5" />
+        <path d="M13.8 36.8 L15 38.1 L16.2 36.8" />
+        <path d="M16.2 42 L17.4 43.3 L18.6 42" />
+        <path d="M19.8 47 L21 48.3 L22.2 47" />
+        <path d="M24.2 51.5 L25.4 52.8 L26.6 51.5" />
+        <path d="M28.5 55 L29.6 56.2 L30.7 55" />
+
+        <path d="M39.8 10.8 L38.6 12 L37.4 10.8" />
+        <path d="M44.2 15.5 L43 16.7 L41.8 15.5" />
+        <path d="M47.8 20.5 L46.6 21.8 L45.4 20.5" />
+        <path d="M50.2 26.2 L49 27.5 L47.8 26.2" />
+        <path d="M51.2 31.5 L50 32.8 L48.8 31.5" />
+        <path d="M50.2 36.8 L49 38.1 L47.8 36.8" />
+        <path d="M47.8 42 L46.6 43.3 L45.4 42" />
+        <path d="M44.2 47 L43 48.3 L41.8 47" />
+        <path d="M39.8 51.5 L38.6 52.8 L37.4 51.5" />
+        <path d="M35.5 55 L34.4 56.2 L33.3 55" />
+      </g>
     </svg>
   )
 }
@@ -110,7 +119,7 @@ export default function AboutPage() {
           className="about-quiet-scroll-hint pointer-events-none absolute bottom-8 right-0 md:bottom-10"
           aria-hidden
         >
-          <div className="about-quiet-bounce-arrow flex flex-col items-center">
+          <div className="about-quiet-bounce-arrow flex flex-col items-center gap-2.5">
             <AboutTripleChevron />
             <AboutBaseballBall />
           </div>
