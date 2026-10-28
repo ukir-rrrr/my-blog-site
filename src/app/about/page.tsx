@@ -127,7 +127,7 @@ export default function AboutPage() {
         className="about-featured-work pb-24 pt-20 md:pb-32 md:pt-28"
         aria-label="Projects"
       >
-        <h2 className="text-center text-sm font-medium tracking-[0.12em] text-muted-foreground uppercase">
+        <h2 className="text-center text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           Projects
         </h2>
 
