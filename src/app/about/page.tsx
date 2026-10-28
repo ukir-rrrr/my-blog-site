@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { ChevronDown } from 'lucide-react'
 import Layout from '@/components/layout'
 
 export default function AboutPage() {
@@ -33,6 +34,13 @@ export default function AboutPage() {
           <p className="mt-2 text-[0.8125rem] leading-[1.45] text-muted-foreground sm:text-[0.84375rem] sm:leading-[1.5] md:mt-2.5">
             できないことができるようになる。知らなかったことを知って、さらに力をつける。エンジニアリングはまだまだ勉強中で、それでも学びながら、プロダクトを積み上げています。
           </p>
+        </div>
+
+        <div
+          className="about-quiet-scroll-hint pointer-events-none absolute bottom-8 right-0 text-muted-foreground/55 md:bottom-10"
+          aria-hidden
+        >
+          <ChevronDown className="about-quiet-bounce-arrow h-5 w-5 stroke-[1.75]" />
         </div>
       </div>
 

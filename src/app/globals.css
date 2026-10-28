@@ -129,3 +129,35 @@
 .about-quiet-copy {
   text-wrap: pretty;
 }
+
+@keyframes about-quiet-arrow-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  18% {
+    transform: translateY(0);
+  }
+  42% {
+    transform: translateY(9px);
+  }
+  52% {
+    transform: translateY(5px);
+  }
+  62% {
+    transform: translateY(8px);
+  }
+  78% {
+    transform: translateY(0);
+  }
+}
+
+.about-quiet-bounce-arrow {
+  animation: about-quiet-arrow-bounce 1.35s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-quiet-bounce-arrow {
+    animation: none;
+  }
+}
