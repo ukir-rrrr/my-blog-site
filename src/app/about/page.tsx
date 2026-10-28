@@ -5,48 +5,45 @@ function AboutBaseballBall() {
   return (
     <svg
       className="h-14 w-14 shrink-0"
-      viewBox="0 0 64 64"
+      viewBox="0 0 100 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden
     >
-      <circle cx="32" cy="32" r="28" fill="#ffffff" stroke="#0a0a0a" strokeWidth="2.25" />
-
+      <circle cx="50" cy="50" r="46" fill="#ffffff" stroke="#000000" strokeWidth="4" />
       <path
-        d="M32 6 Q 8 22 32 32 Q 8 42 32 58"
-        stroke="#0a0a0a"
-        strokeWidth="1.05"
+        d="M 22 18 C 48 35, 48 65, 22 82"
+        fill="none"
+        stroke="#000000"
+        strokeWidth="2.2"
         strokeLinecap="round"
       />
       <path
-        d="M32 6 Q 56 22 32 32 Q 56 42 32 58"
-        stroke="#0a0a0a"
-        strokeWidth="1.05"
+        d="M 78 18 C 52 35, 52 65, 78 82"
+        fill="none"
+        stroke="#000000"
+        strokeWidth="2.2"
         strokeLinecap="round"
       />
-
-      <g stroke="#0a0a0a" strokeWidth="1.15" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M24.2 10.8 L25.4 12 L26.6 10.8" />
-        <path d="M19.8 15.5 L21 16.7 L22.2 15.5" />
-        <path d="M16.2 20.5 L17.4 21.8 L18.6 20.5" />
-        <path d="M13.8 26.2 L15 27.5 L16.2 26.2" />
-        <path d="M12.8 31.5 L14 32.8 L15.2 31.5" />
-        <path d="M13.8 36.8 L15 38.1 L16.2 36.8" />
-        <path d="M16.2 42 L17.4 43.3 L18.6 42" />
-        <path d="M19.8 47 L21 48.3 L22.2 47" />
-        <path d="M24.2 51.5 L25.4 52.8 L26.6 51.5" />
-        <path d="M28.5 55 L29.6 56.2 L30.7 55" />
-
-        <path d="M39.8 10.8 L38.6 12 L37.4 10.8" />
-        <path d="M44.2 15.5 L43 16.7 L41.8 15.5" />
-        <path d="M47.8 20.5 L46.6 21.8 L45.4 20.5" />
-        <path d="M50.2 26.2 L49 27.5 L47.8 26.2" />
-        <path d="M51.2 31.5 L50 32.8 L48.8 31.5" />
-        <path d="M50.2 36.8 L49 38.1 L47.8 36.8" />
-        <path d="M47.8 42 L46.6 43.3 L45.4 42" />
-        <path d="M44.2 47 L43 48.3 L41.8 47" />
-        <path d="M39.8 51.5 L38.6 52.8 L37.4 51.5" />
-        <path d="M35.5 55 L34.4 56.2 L33.3 55" />
+      <g stroke="#000000" strokeWidth="2" strokeLinecap="round" fill="none">
+        <path d="M28 24 l6 4" />
+        <path d="M32 30 l6 3" />
+        <path d="M35 37 l6 2" />
+        <path d="M36 44 l6 1" />
+        <path d="M36 51 l6 -1" />
+        <path d="M35 58 l6 -2" />
+        <path d="M32 65 l6 -3" />
+        <path d="M28 72 l6 -4" />
+      </g>
+      <g stroke="#000000" strokeWidth="2" strokeLinecap="round" fill="none">
+        <path d="M72 24 l-6 4" />
+        <path d="M68 30 l-6 3" />
+        <path d="M65 37 l-6 2" />
+        <path d="M64 44 l-6 1" />
+        <path d="M64 51 l-6 -1" />
+        <path d="M65 58 l-6 -2" />
+        <path d="M68 65 l-6 -3" />
+        <path d="M72 72 l-6 -4" />
       </g>
     </svg>
   )
