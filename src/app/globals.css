@@ -125,3 +125,7 @@
 .about-quiet {
   background: hsl(var(--background));
 }
+
+.about-quiet-copy {
+  text-wrap: pretty;
+}

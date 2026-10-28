@@ -18,11 +18,11 @@ export default function AboutPage() {
           />
         </div>
 
-        <div className="max-w-xl pb-2 text-left md:absolute md:bottom-8 md:left-6 md:pb-0 lg:bottom-10 lg:left-10 lg:max-w-2xl">
-          <p className="text-2xl font-bold leading-snug tracking-tight text-foreground sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">
+        <div className="about-quiet-copy max-w-[19rem] pb-2 text-left sm:max-w-[21rem] md:absolute md:bottom-8 md:left-6 md:max-w-[22rem] md:pb-0 lg:bottom-10 lg:left-10 lg:max-w-[23rem]">
+          <p className="text-[1.75rem] font-bold leading-[1.08] tracking-[-0.02em] text-foreground sm:text-[1.875rem] md:text-[2rem]">
             Getting better is the point.
           </p>
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base md:mt-5 md:max-w-lg md:text-[0.95rem] md:leading-7">
+          <p className="mt-2 text-[0.8125rem] leading-[1.45] text-muted-foreground sm:text-[0.84375rem] sm:leading-[1.5] md:mt-2.5">
             できないことができるようになる。知らなかったことを知って、さらに力をつける。エンジニアリングはまだまだ勉強中で、それでも学びながら、小さなプロダクトを積み上げています。
           </p>
         </div>
