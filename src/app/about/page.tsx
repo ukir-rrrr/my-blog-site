@@ -123,6 +123,34 @@ export default function AboutPage() {
         </div>
       </div>
 
+      <section
+        className="about-featured-work border-t border-border/40 pb-24 pt-20 md:pb-32 md:pt-28"
+        aria-label="Featured work"
+      >
+        <p className="text-center font-mono text-sm tracking-wide text-muted-foreground">
+          /* Featured Work */
+        </p>
+
+        <div className="mx-auto mt-14 grid max-w-5xl gap-10 md:mt-16 md:grid-cols-2 md:gap-x-12 md:gap-y-14">
+          {[0, 1].map((index) => (
+            <article key={index} className="flex flex-col gap-4">
+              <div
+                className="aspect-[4/3] w-full rounded-xl border border-border/50 bg-muted/25"
+                aria-hidden
+              />
+              <div className="space-y-3" aria-hidden>
+                <div className="h-3 w-16 rounded-full bg-muted/70" />
+                <div className="h-6 w-2/5 max-w-[12rem] rounded-md bg-muted/80" />
+                <div className="space-y-2">
+                  <div className="h-2.5 w-full max-w-md rounded bg-muted/45" />
+                  <div className="h-2.5 w-4/5 max-w-sm rounded bg-muted/40" />
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <span id="contact" className="sr-only" tabIndex={-1}>
         Contact
       </span>

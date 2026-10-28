@@ -130,6 +130,10 @@
   text-wrap: pretty;
 }
 
+.about-featured-work {
+  background: hsl(var(--background));
+}
+
 @keyframes about-quiet-arrow-bounce {
   0%,
   100% {
