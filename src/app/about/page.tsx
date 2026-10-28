@@ -1,6 +1,34 @@
 import Image from 'next/image'
-import { ChevronDown } from 'lucide-react'
 import Layout from '@/components/layout'
+
+function AboutTripleChevron() {
+  const chevrons = [
+    { y: 10 },
+    { y: 30 },
+    { y: 50 },
+  ]
+
+  return (
+    <svg
+      className="about-quiet-bounce-arrow h-[2.125rem] w-[2.125rem] text-black dark:text-black"
+      viewBox="0 0 56 72"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+    >
+      {chevrons.map(({ y }) => (
+        <path
+          key={y}
+          d={`M8 ${y + 6} L28 ${y + 18} L48 ${y + 6}`}
+          stroke="currentColor"
+          strokeWidth="7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      ))}
+    </svg>
+  )
+}
 
 export default function AboutPage() {
   return (
@@ -37,10 +65,10 @@ export default function AboutPage() {
         </div>
 
         <div
-          className="about-quiet-scroll-hint pointer-events-none absolute bottom-8 right-0 text-muted-foreground/55 md:bottom-10"
+          className="about-quiet-scroll-hint pointer-events-none absolute bottom-8 right-0 md:bottom-10"
           aria-hidden
         >
-          <ChevronDown className="about-quiet-bounce-arrow h-5 w-5 stroke-[1.75]" />
+          <AboutTripleChevron />
         </div>
       </div>
 
