@@ -4,7 +4,7 @@ import Layout from '@/components/layout'
 export default function AboutPage() {
   return (
     <Layout
-      mainClassName="mx-auto w-full max-w-none flex flex-1 flex-col px-6 py-6 md:px-12 md:py-8 lg:px-16"
+      mainClassName="mx-auto w-full max-w-none flex flex-1 flex-col px-4 py-6 md:py-8"
     >
       <div className="about-quiet relative flex min-h-[calc(100dvh-11rem)] flex-1 flex-col justify-between gap-10 md:min-h-[calc(100dvh-10rem)] md:gap-0">
         <div className="flex flex-1 items-center justify-center md:pb-36 lg:pb-44">
@@ -18,7 +18,7 @@ export default function AboutPage() {
           />
         </div>
 
-        <div className="about-quiet-copy max-w-[19rem] pb-2 text-left sm:max-w-[21rem] md:absolute md:bottom-8 md:left-6 md:max-w-[22rem] md:pb-0 lg:bottom-10 lg:left-10 lg:max-w-[23rem]">
+        <div className="about-quiet-copy max-w-[19rem] pb-2 text-left sm:max-w-[21rem] md:absolute md:bottom-8 md:left-0 md:max-w-[22rem] md:pb-0 lg:bottom-10 lg:max-w-[23rem]">
           <p className="text-[1.75rem] font-bold leading-[1.08] tracking-[-0.02em] text-foreground sm:text-[1.875rem] md:text-[2rem]">
             Getting better is the point.
           </p>
