@@ -89,27 +89,6 @@ function AppCardContents({
   )
 }
 
-function fitTitleToSingleLine(title: HTMLHeadingElement) {
-  title.style.fontSize = ''
-  const maxPx = parseFloat(getComputedStyle(title).fontSize)
-  let low = 11
-  let high = maxPx
-  let best = maxPx
-
-  for (let pass = 0; pass < 24; pass++) {
-    const mid = (low + high) / 2
-    title.style.fontSize = `${mid}px`
-    if (title.getClientRects().length <= 1) {
-      best = mid
-      low = mid
-    } else {
-      high = mid
-    }
-  }
-
-  title.style.fontSize = `${best}px`
-}
-
 function usePocketMetrics(
   pocketRef: React.RefObject<HTMLDivElement>,
   titleRef: React.RefObject<HTMLHeadingElement>,
@@ -122,8 +101,6 @@ function usePocketMetrics(
     if (!pocket || !title) return
 
     const sync = () => {
-      fitTitleToSingleLine(title)
-
       const titleGap = 4
       const pocketRect = pocket.getBoundingClientRect()
       const titleRect = title.getBoundingClientRect()
@@ -141,10 +118,28 @@ function usePocketMetrics(
       }
     }
 
-    sync()
-    const ro = new ResizeObserver(sync)
+    let cancelled = false
+
+    const run = async () => {
+      if (typeof document !== 'undefined' && document.fonts?.ready) {
+        try {
+          await document.fonts.ready
+        } catch {
+          /* ignore */
+        }
+      }
+      if (!cancelled) sync()
+    }
+
+    void run()
+    const ro = new ResizeObserver(() => {
+      void run()
+    })
     ro.observe(title)
-    return () => ro.disconnect()
+    return () => {
+      cancelled = true
+      ro.disconnect()
+    }
   }, [enabled, pocketRef, titleRef])
 }
 
