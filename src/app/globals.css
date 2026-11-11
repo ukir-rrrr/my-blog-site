@@ -138,13 +138,15 @@
   background: hsl(var(--background));
 }
 
-/* Live Apps–style pocket cards (About / Apps) */
+/* Live Apps–style pocket cards (About / Apps) — astapable 実測ベース */
 .about-app-list {
-  --about-app-card-width: min(100%, 15rem);
-  /* astapable 実測 ~70.5px */
-  --about-app-lift: 4.41rem;
-  --about-app-shelf-height: 8rem;
-  --about-app-shelf-below: 1.65rem;
+  --about-app-card-width: min(100%, 14.1075rem);
+  --about-app-card-radius: 1.4108rem;
+  --about-app-cover-top-h: 9.8164rem;
+  --about-app-shelf-top: 12.125rem;
+  --about-app-shelf-below: 1.6465rem;
+  --about-app-lift: 70.539px;
+  --about-app-shelf-width-mult: 1.25;
 }
 
 .about-app-item {
@@ -161,32 +163,37 @@
 .about-app-shelf-wrap {
   pointer-events: none;
   position: absolute;
+  top: var(--about-app-shelf-top);
   bottom: 0;
   left: 50%;
   z-index: 3;
   display: flex;
-  width: calc(var(--about-app-card-width) * 1.25);
-  max-width: 18.75rem;
-  height: var(--about-app-shelf-height);
+  width: calc(var(--about-app-card-width) * var(--about-app-shelf-width-mult));
   transform: translateX(-50%);
   align-items: flex-end;
   justify-content: flex-end;
-  isolation: isolate;
 }
 
 .about-app-shelf {
   display: flex;
   width: 100%;
+  min-height: 7.5rem;
   height: 100%;
   align-items: flex-end;
   justify-content: flex-end;
-  border-bottom-left-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: var(--about-app-card-radius);
+  border-bottom-right-radius: var(--about-app-card-radius);
   padding: 1rem;
-  background-color: rgba(251, 251, 251, 0.28);
+  background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 2px 4px rgba(28, 28, 28, 0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .about-app-shelf {
+    background-color: rgba(255, 255, 255, 0.78);
+  }
 }
 
 .about-app-shelf-icon-btn {
@@ -218,7 +225,7 @@
   width: var(--about-app-card-width);
   flex-direction: column;
   overflow: hidden;
-  border-radius: 1.5rem;
+  border-radius: var(--about-app-card-radius);
   color: hsl(var(--foreground));
   text-decoration: none;
   box-shadow: 0 2px 16px rgba(28, 28, 28, 0.1);
@@ -226,23 +233,22 @@
   will-change: transform;
 }
 
-/* タッチ・reduced-motion: 説明が読める「出た」状態 */
-@media (hover: none), (prefers-reduced-motion: reduce) {
-  .about-app-pocket:not(.about-app-pocket--soon) .about-app-card {
-    transform: translateY(calc(-1 * var(--about-app-lift)));
-  }
+.about-app-pocket:not(.about-app-pocket--soon):hover .about-app-card,
+.about-app-pocket:not(.about-app-pocket--soon):focus-within .about-app-card {
+  transform: translateY(calc(-1 * var(--about-app-lift)));
 }
 
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .about-app-pocket:not(.about-app-pocket--soon):hover .about-app-card,
-  .about-app-pocket:not(.about-app-pocket--soon):focus-within .about-app-card {
+/* タッチ・reduced-motion: 説明が読める「出た」状態 */
+@media (hover: none) and (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .about-app-pocket:not(.about-app-pocket--soon) .about-app-card {
     transform: translateY(calc(-1 * var(--about-app-lift)));
   }
 }
 
 .about-app-cover-top {
   position: relative;
-  height: 9.85rem;
+  height: var(--about-app-cover-top-h);
+  flex-shrink: 0;
   overflow: hidden;
 }
 
@@ -265,18 +271,16 @@
   transition: transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .about-app-pocket:not(.about-app-pocket--soon):hover .about-app-media,
-  .about-app-pocket:not(.about-app-pocket--soon):focus-within .about-app-media {
-    transform: translateY(-0.35rem);
-  }
+.about-app-pocket:not(.about-app-pocket--soon):hover .about-app-media,
+.about-app-pocket:not(.about-app-pocket--soon):focus-within .about-app-media {
+  transform: translateY(-0.35rem);
 }
 
 .about-app-shot-frame {
   position: absolute;
-  left: 0.65rem;
-  top: 1.35rem;
-  width: 6.1rem;
+  left: 0.45rem;
+  top: 1.15rem;
+  width: 5.35rem;
   transform: rotate(-11deg);
   border-radius: 0.65rem;
   border: 2px solid rgba(255, 255, 255, 0.92);
@@ -293,10 +297,10 @@
 
 .about-app-icon-frame {
   position: absolute;
-  right: 0.5rem;
-  top: 2.65rem;
+  right: 0.35rem;
+  top: 2.35rem;
   z-index: 2;
-  width: 3.65rem;
+  width: 3.2rem;
   transform: rotate(9deg);
   border-radius: 0.85rem;
   border: 2px solid rgba(255, 255, 255, 0.95);
@@ -314,12 +318,33 @@
 .about-app-cover-bottom {
   pointer-events: none;
   background: hsl(var(--background));
-  padding: 1rem 1.15rem 2.75rem;
+  padding: 0 1.175rem 2.35rem;
+}
+
+.about-app-title {
+  max-width: 100%;
+  padding-top: 0;
+  font-size: 1.4102rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+}
+
+.about-app-desc {
+  margin-top: 0.2rem;
+  font-size: 0.7646rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: hsl(var(--muted-foreground));
 }
 
 @media (max-width: 767px) {
+  .about-app-shelf {
+    min-height: 4.5rem;
+  }
+
   .about-app-list {
-    --about-app-shelf-height: 4.5rem;
     --about-app-lift: 3.65rem;
   }
 }
