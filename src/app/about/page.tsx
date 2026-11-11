@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import Layout from '@/components/layout'
+import ProjectCard from '@/components/about/project-card'
+import { projects } from '@/data/projects'
 
 function AboutBaseballBall() {
   return (
@@ -132,21 +134,8 @@ export default function AboutPage() {
         </h2>
 
         <div className="mt-12 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:mt-14 md:gap-6">
-          {[0, 1].map((index) => (
-            <article key={index} className="flex min-w-0 flex-col gap-4">
-              <div
-                className="aspect-[16/10] w-full rounded-xl border border-border/50 bg-muted/25"
-                aria-hidden
-              />
-              <div className="space-y-3" aria-hidden>
-                <div className="h-3 w-16 rounded-full bg-muted/70" />
-                <div className="h-6 w-2/5 max-w-[12rem] rounded-md bg-muted/80" />
-                <div className="space-y-2">
-                  <div className="h-2.5 w-full max-w-md rounded bg-muted/45" />
-                  <div className="h-2.5 w-4/5 max-w-sm rounded bg-muted/40" />
-                </div>
-              </div>
-            </article>
+          {projects.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
       </section>
