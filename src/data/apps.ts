@@ -9,6 +9,8 @@ export type App = {
   href?: string
   iconSrc: string
   previewSrc: string
+  /** カード上部の色帯（アイコンの緑を薄くした色） */
+  accentColor: string
 }
 
 export const apps: App[] = [
@@ -22,5 +24,6 @@ export const apps: App[] = [
     href: 'https://apps.apple.com/jp/app/%E3%82%AB%E3%82%A6%E3%83%B3%E3%82%BF%E3%83%BC-%E6%A3%9A%E5%8D%B8%E3%81%97/id6824777326',
     iconSrc: '/apps/counter-plus/icon.webp',
     previewSrc: '/apps/counter-plus/screenshot-01-home.webp',
+    accentColor: '#CFE8D9',
   },
 ]

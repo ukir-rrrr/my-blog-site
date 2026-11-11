@@ -150,11 +150,16 @@ export default function AboutPage() {
           Apps
         </h2>
 
-        <div className="mt-12 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:mt-14 md:gap-6">
+        <ul
+          className="about-app-list mt-12 grid w-full list-none grid-cols-1 gap-y-16 p-0 sm:gap-y-20 md:mt-14 md:grid-cols-3 md:gap-x-5 md:gap-y-24"
+          role="list"
+        >
           {apps.map((app) => (
-            <AppCard key={app.slug} app={app} />
+            <li key={app.slug} className="flex min-w-0 justify-center">
+              <AppCard app={app} />
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <span id="contact" className="sr-only" tabIndex={-1}>

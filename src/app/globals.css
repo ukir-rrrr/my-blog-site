@@ -138,6 +138,197 @@
   background: hsl(var(--background));
 }
 
+/* Live Apps–style pocket cards (About / Apps) */
+.about-app-list {
+  --about-app-card-width: min(100%, 15rem);
+  --about-app-lift: 4.4rem;
+}
+
+.about-app-item {
+  width: 100%;
+  max-width: var(--about-app-card-width);
+}
+
+.about-app-pocket {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 1.65rem;
+}
+
+.about-app-shelf-wrap {
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.about-app-shelf {
+  display: flex;
+  width: calc(var(--about-app-card-width) * 1.25);
+  max-width: 18.75rem;
+  height: 5rem;
+  align-items: flex-end;
+  justify-content: flex-end;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(251, 251, 251, 0.22);
+  box-shadow: 0 2px 4px rgba(28, 28, 28, 0.12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.about-app-shelf-icon-btn {
+  display: flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: hsl(var(--background));
+  box-shadow: 0 2px 8px rgba(28, 28, 28, 0.1);
+}
+
+.about-app-shelf-pill {
+  border-radius: 9999px;
+  background: hsl(var(--background));
+  padding: 0.35rem 0.85rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: hsl(var(--muted-foreground));
+  box-shadow: 0 2px 8px rgba(28, 28, 28, 0.08);
+}
+
+.about-app-card {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: var(--about-app-card-width);
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  box-shadow: 0 2px 16px rgba(28, 28, 28, 0.1);
+  transition: transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform;
+}
+
+.about-app-pocket:not(.about-app-pocket--soon):hover .about-app-card,
+.about-app-pocket:not(.about-app-pocket--soon):focus-within .about-app-card {
+  transform: translateY(calc(-1 * var(--about-app-lift)));
+}
+
+.about-app-cover-top {
+  position: relative;
+  height: 9.85rem;
+  overflow: hidden;
+}
+
+.about-app-cover-curve {
+  pointer-events: none;
+  position: absolute;
+  bottom: -0.15rem;
+  left: -5%;
+  z-index: 3;
+  height: 3.25rem;
+  width: 110%;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: hsl(var(--background));
+}
+
+.about-app-media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transition: transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.about-app-pocket:not(.about-app-pocket--soon):hover .about-app-media,
+.about-app-pocket:not(.about-app-pocket--soon):focus-within .about-app-media {
+  transform: translateY(-0.35rem);
+}
+
+.about-app-shot-frame {
+  position: absolute;
+  left: 0.65rem;
+  top: 1.35rem;
+  width: 6.1rem;
+  transform: rotate(-11deg);
+  border-radius: 0.65rem;
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  background: #111;
+  box-shadow: 0 8px 20px rgba(28, 28, 28, 0.22);
+  overflow: hidden;
+}
+
+.about-app-shot {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.about-app-icon-frame {
+  position: absolute;
+  right: 0.5rem;
+  top: 2.65rem;
+  z-index: 2;
+  width: 3.65rem;
+  transform: rotate(9deg);
+  border-radius: 0.85rem;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 22px rgba(28, 28, 28, 0.2);
+  overflow: hidden;
+  background: hsl(var(--background));
+}
+
+.about-app-icon {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.about-app-cover-bottom {
+  pointer-events: none;
+  background: hsl(var(--background));
+  padding: 1rem 1.15rem 2.35rem;
+}
+
+@media (max-width: 767px) {
+  .about-app-shelf {
+    height: 4.5rem;
+  }
+
+  .about-app-list {
+    --about-app-lift: 3.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-app-card,
+  .about-app-media {
+    transition: none;
+  }
+
+  .about-app-pocket:not(.about-app-pocket--soon):hover .about-app-card,
+  .about-app-pocket:not(.about-app-pocket--soon):focus-within .about-app-card {
+    transform: none;
+  }
+
+  .about-app-pocket:not(.about-app-pocket--soon):hover .about-app-media,
+  .about-app-pocket:not(.about-app-pocket--soon):focus-within .about-app-media {
+    transform: none;
+  }
+}
+
 @keyframes about-quiet-arrow-bounce {
   0%,
   100% {
