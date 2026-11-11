@@ -16,11 +16,11 @@ export const projects: Project[] = [
     tags: ['Website'],
     href: 'https://www.youme-taiyo.com/',
     images: [
-      '/projects/youme-taiyo/01-hero.webp',
-      '/projects/youme-taiyo/02-section.webp',
-      '/projects/youme-taiyo/03-section.webp',
-      '/projects/youme-taiyo/04-section.webp',
-      '/projects/youme-taiyo/05-section.webp',
+      '/projects/youme-taiyo/01-watercolor-hero.webp',
+      '/projects/youme-taiyo/02-stores.webp',
+      '/projects/youme-taiyo/03-about.webp',
+      '/projects/youme-taiyo/04-map.webp',
+      '/projects/youme-taiyo/05-news-footer.webp',
     ],
   },
   {

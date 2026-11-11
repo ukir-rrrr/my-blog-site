@@ -79,16 +79,19 @@ export default function ProjectCarousel({ images, alt }: ProjectCarouselProps) {
           src={src}
           alt={`${alt} — screenshot ${imageIndex + 1}`}
           fill
+          unoptimized
           sizes="(max-width: 640px) 100vw, 50vw"
           className={cn(
-            'object-cover object-top transition-opacity duration-700',
-            imageIndex === index ? 'opacity-100' : 'opacity-0',
+            'absolute inset-0 object-cover object-top transition-opacity duration-700',
+            imageIndex === index
+              ? 'z-10 opacity-100'
+              : 'pointer-events-none z-0 opacity-0 invisible',
           )}
           priority={imageIndex === 0}
         />
       ))}
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-3 flex justify-center gap-1.5">
+      <div className="pointer-events-none absolute inset-x-0 bottom-3 z-30 flex justify-center gap-1.5">
         {images.map((_, dotIndex) => (
           <button
             key={dotIndex}
