@@ -38,4 +38,19 @@ export const projects: Project[] = [
       '/projects/onnaton/05-section.webp',
     ],
   },
+  {
+    slug: 'yamayama-curry',
+    title: '山々カレー',
+    description:
+      '安曇野のJoneN Peakworksが運営する山行向けレトルトカレーのShopify公式ストア。商品紹介と素材・栄養の背景を掲載しています。',
+    tags: ['Shopify'],
+    href: 'https://www.yamayama-curry.com/',
+    images: [
+      '/projects/yamayama-curry/01-hero.webp',
+      '/projects/yamayama-curry/02-section.webp',
+      '/projects/yamayama-curry/03-section.webp',
+      '/projects/yamayama-curry/04-section.webp',
+      '/projects/yamayama-curry/05-section.webp',
+    ],
+  },
 ]
