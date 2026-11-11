@@ -126,7 +126,7 @@ export default function AboutPage() {
       </div>
 
       <section
-        className="about-featured-work pb-24 pt-20 md:pb-32 md:pt-28"
+        className="about-featured-work px-6 pb-24 pt-20 md:px-10 md:pb-32 md:pt-28"
         aria-label="Projects"
       >
         <h2 className="text-center text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

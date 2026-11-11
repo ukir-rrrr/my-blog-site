@@ -17,10 +17,25 @@ export const projects: Project[] = [
     href: 'https://www.youme-taiyo.com/',
     images: [
       '/projects/youme-taiyo/01-hero.webp',
-      '/projects/youme-taiyo/02-shops.webp',
-      '/projects/youme-taiyo/03-about.webp',
-      '/projects/youme-taiyo/04-map.webp',
-      '/projects/youme-taiyo/05-stores.webp',
+      '/projects/youme-taiyo/02-section.webp',
+      '/projects/youme-taiyo/03-section.webp',
+      '/projects/youme-taiyo/04-section.webp',
+      '/projects/youme-taiyo/05-section.webp',
+    ],
+  },
+  {
+    slug: 'onnaton',
+    title: '恩納豚',
+    description:
+      '沖縄・那覇の完全予約制しゃぶしゃぶ専門店の公式サイト。あぐー豚と特選石垣牛のコースや店舗情報を案内しています。',
+    tags: ['Website'],
+    href: 'https://www.onnaton.com/',
+    images: [
+      '/projects/onnaton/01-hero.webp',
+      '/projects/onnaton/02-section.webp',
+      '/projects/onnaton/03-section.webp',
+      '/projects/onnaton/04-section.webp',
+      '/projects/onnaton/05-section.webp',
     ],
   },
 ]
