@@ -93,7 +93,6 @@ export default function AppCard({ app }: { app: App }) {
     return (
       <article className="about-app-item">
         <div className={pocketClass}>
-          {shelf}
           <Link
             href={app.href!}
             target="_blank"
@@ -103,6 +102,7 @@ export default function AppCard({ app }: { app: App }) {
           >
             <AppCardContents app={app} />
           </Link>
+          {shelf}
         </div>
       </article>
     )
@@ -111,10 +111,10 @@ export default function AppCard({ app }: { app: App }) {
   return (
     <article className="about-app-item">
       <div className={pocketClass}>
-        {shelf}
-        <div className="about-app-card about-app-card--static" aria-labelledby={`app-${app.slug}`}>
+        <div className="about-app-card about-app-card--static">
           <AppCardContents app={app} />
         </div>
+        {shelf}
       </div>
     </article>
   )
