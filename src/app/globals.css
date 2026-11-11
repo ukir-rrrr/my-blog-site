@@ -134,6 +134,10 @@
   background: hsl(var(--background));
 }
 
+.about-apps {
+  background: hsl(var(--background));
+}
+
 @keyframes about-quiet-arrow-bounce {
   0%,
   100% {

@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import Layout from '@/components/layout'
 import ProjectCard from '@/components/about/project-card'
+import AppCard from '@/components/about/app-card'
 import { projects } from '@/data/projects'
+import { apps } from '@/data/apps'
 
 function AboutBaseballBall() {
   return (
@@ -136,6 +138,21 @@ export default function AboutPage() {
         <div className="mt-12 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:mt-14 md:gap-6">
           {projects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
+          ))}
+        </div>
+      </section>
+
+      <section
+        className="about-apps px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-20"
+        aria-label="Apps"
+      >
+        <h2 className="text-center text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          Apps
+        </h2>
+
+        <div className="mt-12 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:mt-14 md:gap-6">
+          {apps.map((app) => (
+            <AppCard key={app.slug} app={app} />
           ))}
         </div>
       </section>
