@@ -140,24 +140,27 @@
 
 /* Live Apps–style pocket cards (About / Apps) — astapable 実測ベース */
 .about-app-list {
-  --about-app-card-width: min(100%, 14.1075rem);
+  /* カード 225.72px; ポケット 282.14px → 左右各 ~28px (1.764rem) */
+  --about-app-card-width: 14.1075rem;
+  --about-app-shelf-outset: 1.7644rem;
   --about-app-card-radius: 1.4108rem;
   --about-app-cover-top-h: 9.8164rem;
   /* cover-top + 1.2rem title (1.1 lh) + 4px gap */
   --about-app-shelf-top: 12.175rem;
   --about-app-shelf-below: 1.6465rem;
   --about-app-lift: 70.539px;
-  --about-app-shelf-width-mult: 1.25;
 }
 
 .about-app-item {
-  width: var(--about-app-card-width);
+  position: relative;
+  width: fit-content;
   max-width: 100%;
 }
 
 .about-app-pocket {
   position: relative;
-  width: 100%;
+  width: var(--about-app-card-width);
+  max-width: 100%;
   padding-bottom: var(--about-app-shelf-below);
 }
 
@@ -165,12 +168,12 @@
   pointer-events: none;
   position: absolute;
   top: var(--about-app-shelf-top);
+  right: calc(-1 * var(--about-app-shelf-outset));
   bottom: 0;
-  left: 50%;
+  left: calc(-1 * var(--about-app-shelf-outset));
   z-index: 3;
   display: flex;
-  width: calc(var(--about-app-card-width) * var(--about-app-shelf-width-mult));
-  transform: translateX(-50%);
+  width: auto;
   align-items: flex-end;
   justify-content: flex-end;
 }
@@ -223,7 +226,7 @@
   position: relative;
   z-index: 1;
   display: flex;
-  width: var(--about-app-card-width);
+  width: 100%;
   flex-direction: column;
   overflow: hidden;
   border-radius: var(--about-app-card-radius);
