@@ -101,7 +101,7 @@ function usePocketMetrics(
     if (!pocket || !title) return
 
     const sync = () => {
-      const titleGap = 6
+      const titleGap = 4
       const pocketRect = pocket.getBoundingClientRect()
       const titleRect = title.getBoundingClientRect()
       const shelfTopPx = titleRect.bottom - pocketRect.top + titleGap
