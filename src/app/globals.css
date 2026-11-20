@@ -121,3 +121,273 @@
     @apply bg-background text-foreground;
   }
 }
+
+.about-quiet {
+  background: hsl(var(--background));
+}
+
+.about-quiet-copy {
+  text-wrap: pretty;
+}
+
+.about-featured-work {
+  background: hsl(var(--background));
+}
+
+.about-apps {
+  background: hsl(var(--background));
+}
+
+/* Live Apps–style pocket cards (About / Apps) — astapable 実測ベース */
+.about-app-list {
+  /* カード 225.72px; ポケット 282.14px → 左右各 ~28px (1.764rem) */
+  --about-app-card-width: 14.1075rem;
+  --about-app-shelf-outset: 1.7644rem;
+  --about-app-card-radius: 1.4108rem;
+  --about-app-cover-top-h: 9.8164rem;
+  /* cover-top + 1.2rem title (1.1 lh) + 4px gap */
+  --about-app-shelf-top: 12.175rem;
+  --about-app-shelf-below: 1.6465rem;
+  --about-app-lift: 70.539px;
+}
+
+.about-app-item {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.about-app-pocket {
+  position: relative;
+  width: var(--about-app-card-width);
+  max-width: 100%;
+  padding-bottom: var(--about-app-shelf-below);
+}
+
+.about-app-shelf-wrap {
+  pointer-events: none;
+  position: absolute;
+  top: var(--about-app-shelf-top);
+  right: calc(-1 * var(--about-app-shelf-outset));
+  bottom: 0;
+  left: calc(-1 * var(--about-app-shelf-outset));
+  z-index: 3;
+  display: flex;
+  width: auto;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.about-app-shelf {
+  display: flex;
+  width: 100%;
+  min-height: 7.5rem;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  border-bottom-left-radius: var(--about-app-card-radius);
+  border-bottom-right-radius: var(--about-app-card-radius);
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.42);
+  box-shadow: 0 2px 4px rgba(28, 28, 28, 0.2);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .about-app-shelf {
+    background-color: rgba(255, 255, 255, 0.78);
+  }
+}
+
+.about-app-shelf-icon-btn {
+  display: flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: hsl(var(--background));
+  box-shadow: 0 2px 8px rgba(28, 28, 28, 0.1);
+}
+
+.about-app-shelf-pill {
+  border-radius: 9999px;
+  background: hsl(var(--background));
+  padding: 0.35rem 0.85rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: hsl(var(--muted-foreground));
+  box-shadow: 0 2px 8px rgba(28, 28, 28, 0.08);
+}
+
+.about-app-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--about-app-card-radius);
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  box-shadow: 0 2px 16px rgba(28, 28, 28, 0.1);
+  transition: transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform;
+}
+
+.about-app-pocket:not(.about-app-pocket--soon):hover .about-app-card,
+.about-app-pocket:not(.about-app-pocket--soon):focus-within .about-app-card {
+  transform: translateY(calc(-1 * var(--about-app-lift)));
+}
+
+/* タッチ・reduced-motion: 説明が読める「出た」状態 */
+@media (hover: none) and (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .about-app-pocket:not(.about-app-pocket--soon) .about-app-card {
+    transform: translateY(calc(-1 * var(--about-app-lift)));
+  }
+}
+
+.about-app-cover-top {
+  position: relative;
+  height: var(--about-app-cover-top-h);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.about-app-cover-curve {
+  pointer-events: none;
+  position: absolute;
+  bottom: -0.15rem;
+  left: -5%;
+  z-index: 3;
+  height: 3.25rem;
+  width: 110%;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: hsl(var(--background));
+}
+
+.about-app-media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transition: transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.about-app-pocket:not(.about-app-pocket--soon):hover .about-app-media,
+.about-app-pocket:not(.about-app-pocket--soon):focus-within .about-app-media {
+  transform: translateY(-0.35rem);
+}
+
+.about-app-shot-frame {
+  position: absolute;
+  left: 0.45rem;
+  top: 1.15rem;
+  width: 5.35rem;
+  transform: rotate(-11deg);
+  border-radius: 0.65rem;
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  background: #111;
+  box-shadow: 0 8px 20px rgba(28, 28, 28, 0.22);
+  overflow: hidden;
+}
+
+.about-app-shot {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.about-app-icon-frame {
+  position: absolute;
+  right: 0.35rem;
+  top: 2.35rem;
+  z-index: 2;
+  width: 3.2rem;
+  transform: rotate(9deg);
+  border-radius: 0.85rem;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 22px rgba(28, 28, 28, 0.2);
+  overflow: hidden;
+  background: hsl(var(--background));
+}
+
+.about-app-icon {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.about-app-cover-bottom {
+  pointer-events: none;
+  background: hsl(var(--background));
+  padding: 0 1.175rem 2.35rem;
+}
+
+.about-app-title {
+  max-width: 100%;
+  padding-top: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+}
+
+.about-app-desc {
+  margin-top: 0.2rem;
+  font-size: 0.7646rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: hsl(var(--muted-foreground));
+}
+
+@media (max-width: 767px) {
+  .about-app-shelf {
+    min-height: 4.5rem;
+  }
+
+  .about-app-list {
+    --about-app-lift: 3.65rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-app-card,
+  .about-app-media {
+    transition: none;
+  }
+}
+
+@keyframes about-quiet-arrow-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  18% {
+    transform: translateY(0);
+  }
+  42% {
+    transform: translateY(9px);
+  }
+  52% {
+    transform: translateY(5px);
+  }
+  62% {
+    transform: translateY(8px);
+  }
+  78% {
+    transform: translateY(0);
+  }
+}
+
+.about-quiet-bounce-arrow {
+  animation: about-quiet-arrow-bounce 1.35s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-quiet-bounce-arrow {
+    animation: none;
+  }
+}
