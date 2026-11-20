@@ -11,16 +11,20 @@ export default function Switch() {
     () => false
   );
   const { setTheme, resolvedTheme } = useTheme();
+  const isDark = mounted && resolvedTheme === "dark";
 
   if (!mounted) {
-    return null;
+    return <span className="inline-block size-9 shrink-0" aria-hidden />;
   }
 
-  if (resolvedTheme === "dark") {
-    return <LightningSlash size={30} onClick={() => setTheme("light")} />;
-  }
-
-  if (resolvedTheme === "light") {
-    return <Lightning size={30} onClick={() => setTheme("dark")} />;
-  }
+  return (
+    <button
+      type="button"
+      aria-label={isDark ? "ライトモードに切り替え" : "ダークモードに切り替え"}
+      className="inline-flex size-9 shrink-0 items-center justify-center rounded-md text-foreground transition-colors hover:bg-accent"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+    >
+      {isDark ? <LightningSlash size={22} /> : <Lightning size={22} />}
+    </button>
+  );
 }

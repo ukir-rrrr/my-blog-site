@@ -107,28 +107,30 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="about-quiet-copy max-w-[19rem] pb-2 text-left sm:max-w-[21rem] md:absolute md:bottom-8 md:left-0 md:max-w-[22rem] md:pb-0 lg:bottom-10 lg:max-w-[23rem]">
-          <p className="text-[1.75rem] font-bold leading-[1.08] tracking-[-0.02em] text-foreground sm:text-[1.875rem] md:text-[2rem]">
-            Getting better is the point.
-          </p>
-          <p className="mt-2 text-[0.8125rem] leading-[1.45] text-muted-foreground sm:text-[0.84375rem] sm:leading-[1.5] md:mt-2.5">
-            できないことができるようになる。知らなかったことを知って、さらに力をつける。エンジニアリングはまだまだ勉強中で、それでも学びながら、プロダクトを積み上げています。
-          </p>
-        </div>
+        <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between md:absolute md:inset-x-0 md:bottom-8 lg:bottom-10">
+          <div className="about-quiet-copy max-w-[22rem] text-left sm:max-w-[21rem] md:max-w-[22rem] lg:max-w-[23rem]">
+            <p className="text-[1.75rem] font-bold leading-[1.08] tracking-[-0.02em] text-foreground sm:text-[1.875rem] md:text-[2rem]">
+              Getting better is the point.
+            </p>
+            <p className="mt-2 text-[0.8125rem] leading-[1.45] text-muted-foreground sm:text-[0.84375rem] sm:leading-[1.5] md:mt-2.5">
+              できないことができるようになる。知らなかったことを知って、さらに力をつける。エンジニアリングはまだまだ勉強中で、それでも学びながら、プロダクトを積み上げています。
+            </p>
+          </div>
 
-        <div
-          className="about-quiet-scroll-hint pointer-events-none absolute bottom-8 right-0 md:bottom-10"
-          aria-hidden
-        >
-          <div className="about-quiet-bounce-arrow flex flex-col items-center gap-2.5">
-            <AboutTripleChevron />
-            <AboutBaseballBall />
+          <div
+            className="about-quiet-scroll-hint pointer-events-none self-end sm:shrink-0"
+            aria-hidden
+          >
+            <div className="about-quiet-bounce-arrow flex flex-col items-center gap-2.5">
+              <AboutTripleChevron />
+              <AboutBaseballBall />
+            </div>
           </div>
         </div>
       </div>
 
       <section
-        className="about-featured-work px-6 pb-24 pt-20 md:px-10 md:pb-32 md:pt-28"
+        className="about-featured-work px-0 pb-24 pt-20 sm:px-2 md:px-6 md:pb-32 md:pt-28"
         aria-label="Projects"
       >
         <h2 className="text-center text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -143,7 +145,7 @@ export default function AboutPage() {
       </section>
 
       <section
-        className="about-apps px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-20"
+        className="about-apps px-0 pb-24 pt-16 sm:px-2 md:px-6 md:pb-32 md:pt-20"
         aria-label="Apps"
       >
         <h2 className="text-center text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

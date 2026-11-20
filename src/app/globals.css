@@ -153,13 +153,14 @@
 
 .about-app-item {
   position: relative;
-  width: fit-content;
+  width: min(100%, calc(var(--about-app-card-width) + 2 * var(--about-app-shelf-outset)));
   max-width: 100%;
+  padding-inline: var(--about-app-shelf-outset);
 }
 
 .about-app-pocket {
   position: relative;
-  width: var(--about-app-card-width);
+  width: min(var(--about-app-card-width), 100%);
   max-width: 100%;
   padding-bottom: var(--about-app-shelf-below);
 }

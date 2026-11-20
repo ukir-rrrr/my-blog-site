@@ -10,7 +10,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: 'youme-taiyo',
-    title: '夢・太陽',
+    title: '株式会社You-me',
     description:
       '世田谷・三軒茶屋と下北沢の4店舗を案内する飲食グループ公式サイト。水彩イラストと店舗・地図情報をまとめた構成です。',
     tags: ['Website'],
@@ -25,7 +25,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'onnaton',
-    title: '恩納豚',
+    title: '恩納豚 那覇',
     description:
       '沖縄・那覇の完全予約制しゃぶしゃぶ専門店の公式サイト。あぐー豚と特選石垣牛のコースや店舗情報を案内しています。',
     tags: ['Website'],
@@ -40,7 +40,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'yamayama-curry',
-    title: '山々カレー',
+    title: '山屋による山屋のためのカレー',
     description:
       '安曇野のJoneN Peakworksが運営する山行向けレトルトカレーのShopify公式ストア。商品紹介と素材・栄養の背景を掲載しています。',
     tags: ['Shopify'],
